@@ -147,6 +147,17 @@ REST_FRAMEWORK = {
     ],
 }
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'test@test.com'
+
+# for sending into emails 'change above conf from console into smtp'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = '<paste your gmail account here>'
+# EMAIL_HOST_PASSWORD = '<paste Google password or app password here>'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+
+
 import datetime
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': datetime.timedelta(minutes=90)
